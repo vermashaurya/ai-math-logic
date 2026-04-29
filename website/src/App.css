@@ -8,7 +8,13 @@
   padding: 4rem 2rem;
   text-align: center;
   margin-bottom: 3rem;
-  background: rgba(20, 20, 35, 0.4);
+  background: rgba(10, 10, 20, 0.4);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-content {
+  animation: float 6s ease-in-out infinite;
 }
 
 .hero h1 {
@@ -33,16 +39,33 @@
 .algo-card {
   padding: 2rem;
   cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
   display: flex;
   flex-direction: column;
-  background: rgba(25, 25, 45, 0.5);
+  background: rgba(15, 15, 25, 0.6);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(0, 242, 254, 0.05);
+}
+
+.algo-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: linear-gradient(to bottom, transparent, rgba(0, 242, 254, 0.05), transparent);
+  animation: scanline 4s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.algo-card:hover::before {
+  opacity: 1;
 }
 
 .algo-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 40px rgba(0, 242, 254, 0.15);
-  border-color: rgba(0, 242, 254, 0.3);
+  animation: pulse-glow 2s infinite alternate;
 }
 
 .algo-card h2 {
