@@ -1,24 +1,20 @@
 import random
 
-# 8-puzzle problem representation
 initial_state = [
     [4, 1, 2],
     [7, 3, 0],
     [8, 5, 6]
 ]
 
-# Goal state for 8-puzzle
 goal_state = [
     [1, 2, 3],
     [4, 5, 6],
     [7, 8, 0]
 ]
 
-# Actions: Up, Down, Left, Right
 actions = [(0, -1), (0, 1), (-1, 0), (1, 0)]
 action_labels = ['Up', 'Down', 'Left', 'Right']
 
-# Heuristic function to calculate the number of misplaced tiles (Hamming distance)
 def heuristic(state):
     misplaced = 0
     for i in range(len(state)):
@@ -27,7 +23,6 @@ def heuristic(state):
                 misplaced += 1
     return misplaced
 
-# Hill Climbing algorithm with random restarts
 def hill_climbing(initial_state, goal_state, max_restarts=1000):
     actions_taken = []
     restarts = 0
@@ -74,8 +69,6 @@ def hill_climbing(initial_state, goal_state, max_restarts=1000):
 
     return []
 
-# Helper functions (same as before)
-
 def find_empty_tile(state):
     for row in range(len(state)):
         for col in range(len(state[row])):
@@ -90,22 +83,18 @@ def create_new_state(state, row, col, new_row, new_col):
     new_state[row][col], new_state[new_row][new_col] = new_state[new_row][new_col], new_state[row][col]
     return new_state
 
-# Print the initial state
 print("Initial State:")
 for row in initial_state:
     print(row)
 print()
 
-# Print the goal state
 print("Goal State:")
 for row in goal_state:
     print(row)
 print()
 
-# Run Hill Climbing algorithm with random restarts
 actions = hill_climbing(initial_state, goal_state)
 
-# Print the actions taken if a solution is found or "No solution"
 if actions:
     print("Actions taken:")
     for action in actions:

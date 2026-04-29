@@ -18,28 +18,20 @@ def load_dataset():
     ]
     return pd.DataFrame(data)
 
-# Load the dataset
 dataset = load_dataset()
 
-# Split the dataset into features (X) and labels (y)
 X = dataset[['Subject', 'Sender', 'Body', 'Attachment']]
 y = dataset['Label']
 
-# Convert categorical features to numerical representations if necessary
 X_encoded = pd.get_dummies(X, drop_first=True)
 
-# Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X_encoded, y, test_size=0.2, random_state=42)
 
-# Create a Gaussian Naive Bayes classifier
 classifier = GaussianNB()
 
-# Train the classifier using the training data
 classifier.fit(X_train, y_train)
 
-# Make predictions on the testing data
 y_pred = classifier.predict(X_test)
 
-# Evaluate the performance of the classifier
 accuracy = accuracy_score(y_test, y_pred)
 print("Accuracy:", accuracy)

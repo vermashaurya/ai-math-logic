@@ -6,7 +6,6 @@ output_file = "website/src/data/algorithms.json"
 
 algorithms = []
 
-# Mapping from folder name to nice title
 titles = {
     "4-queens": "4-Queens Problem",
     "8-puzzle": "8-Puzzle Solver",
@@ -22,7 +21,6 @@ titles = {
     "water-jug": "Water Jug Problem"
 }
 
-# Tags to assign
 tags_map = {
     "4-queens": ["Search", "Backtracking"],
     "8-puzzle": ["Search", "Heuristics"],

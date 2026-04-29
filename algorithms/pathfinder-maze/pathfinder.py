@@ -1,4 +1,3 @@
-# Maze representation
 maze = [
     ['#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#'],
     ['#', '.', '.', '.', '.', '.', '.', '.', '.', '.', '#'],
@@ -9,15 +8,12 @@ maze = [
     ['#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#']
 ]
 
-# Start and end positions
 start = (1, 1)
 end = (5, 9)
 
-# Maze dimensions
 num_rows = len(maze)
 num_cols = len(maze[0])
 
-# DFS algorithm
 def dfs(current, path):
     if current == end:
         return path
@@ -33,7 +29,6 @@ def dfs(current, path):
 
     return None
 
-# Get neighboring positions
 def get_neighbors(position):
     row, col = position
     neighbors = []
@@ -56,10 +51,8 @@ def get_neighbors(position):
 
     return neighbors
 
-# Run DFS algorithm
 path = dfs(start, [start])
 
-# Print the path if found
 if path is not None:
     print("Path found:")
     for position in path:
