@@ -35,23 +35,6 @@ The `algorithms/` folder contains Python implementations of various AI and searc
 
 Methods used to achieve desirable solutions include **BFS (Breadth-First Search)**, **DFS (Depth-First Search)**, **Backtracking**, and **Heuristics**.
 
-## 📸 Previews
-
-### N-Queens Problem
-<center><img width="452" alt="image" src="https://github.com/vermashaurya/ai-foundational/assets/136727534/d881a8c9-43ce-47bc-8d4d-e8a5a4ecffe4"></center>
-
-### Waterjug Problem
-<center><img width="452" alt="image" src="https://github.com/vermashaurya/ai-foundational/assets/136727534/7378a387-4fa7-4139-a894-f96fa0e12217"></center>
-
-### Pathfinding in a Maze
-<center><img width="452" alt="image" src="https://github.com/vermashaurya/ai-foundational/assets/136727534/dea64d16-bf1e-4c6b-9b0d-2912bd9fdd6f"></center>
-
-### 8 Puzzle Problem
-<center><img width="452" alt="image" src="https://github.com/vermashaurya/ai-foundational/assets/136727534/0d4c06b6-eca5-4917-822f-1c98257c31c9"></center>
-
-### Missionary & Cannibals Problem
-<center><img width="452" alt="image" src="https://github.com/vermashaurya/ai-foundational/assets/136727534/f8413202-84fa-4758-abe5-f81a4adbc518"></center>
-
 ## 📂 Project Structure
 
 ```text
@@ -70,8 +53,6 @@ Methods used to achieve desirable solutions include **BFS (Breadth-First Search)
 │   ├── pathfinder-maze/
 │   ├── tsp/
 │   └── water-jug/
-├── automation/
-│   └── instagram-caption-generator/
 ├── website/                 # React Vite Web UI
 └── generate_data.py         # Script to extract python files to UI data
 ```
