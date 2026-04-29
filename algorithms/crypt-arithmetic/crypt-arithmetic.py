@@ -1,10 +1,10 @@
 class CryptarithmeticProblem:
     def __init__(self, words, result):
-        self.words = words  # List of words in the cryptarithmetic problem
-        self.result = result  # Result word in the cryptarithmetic problem
-        self.variables = set(''.join(words + [result]))  # Set of unique variables (letters)
-        self.domain = range(10)  # Domain of variables (0-9 digits)
-        self.assignment = {}  # Current assignment of variables
+        self.words = words  
+        self.result = result 
+        self.variables = set(''.join(words + [result])) 
+        self.domain = range(10)  
+        self.assignment = {} 
 
     def is_complete(self):
         return len(self.variables) == len(self.assignment)
@@ -56,7 +56,6 @@ class CryptarithmeticProblem:
         return None
 
 
-# Example usage
 words = ['CAKE', 'BAKE']
 result = 'BREAD'
 

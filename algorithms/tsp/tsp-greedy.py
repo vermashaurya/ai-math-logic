@@ -1,8 +1,6 @@
 import math
 
 def distance(city1, city2):
-    # Calculate the distance between two cities
-    # Replace this with your actual distance calculation method
     return math.sqrt((city2[0] - city1[0]) ** 2 + (city2[1] - city1[1]) ** 2)
 
 def tsp_a_star(cities):
@@ -32,10 +30,8 @@ def tsp_a_star(cities):
 
     return cost, path
 
-# Test input
 cities = [(0, 0), (1, 2), (3, 4), (1, 1), (2, 2), (4, 3)]
 
-# Run TSP A* algorithm
 optimal_cost, optimal_path = tsp_a_star(cities)
 
 print("Optimal Cost:", optimal_cost)

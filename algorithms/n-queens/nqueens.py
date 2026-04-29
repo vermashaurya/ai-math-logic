@@ -1,17 +1,12 @@
-# Taking number of queens as input from user
 print ("Enter the number of queens: ")
 N = int(input())
 
-# here we create a chessboard
-# NxN matrix with all elements set to 0
 board = [[0]*N for _ in range(N)]
 
 def attack(i, j):
-    #checking vertically and horizontally
     for k in range(0,N):
         if board[i][k]==1 or board[k][j]==1:
             return True
-    #checking diagonally
     for k in range(0,N):
         for l in range(0,N):
             if (k+l==i+j) or (k-l==i-j):
