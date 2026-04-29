@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Terminal, Code, Cpu, Info, X } from 'lucide-react';
+import { Terminal, Code, Cpu, Info, X, Aperture } from 'lucide-react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import algorithmsData from './data/algorithms.json';
@@ -9,7 +9,7 @@ function App() {
   const [selectedAlgo, setSelectedAlgo] = useState(null);
 
   const getIconForTag = (tag) => {
-    switch(tag) {
+    switch (tag) {
       case 'Search': return <Terminal size={16} />;
       case 'Machine Learning': return <Cpu size={16} />;
       case 'Graph': return <Code size={16} />;
@@ -21,6 +21,9 @@ function App() {
     <div className="app-container">
       <header className="hero glass-panel">
         <div className="hero-content">
+          <div className="ai-core-container">
+            <Aperture className="ai-core-icon" size={64} />
+          </div>
           <h1 className="text-gradient">AI & Math Logic Algorithms</h1>
           <p>A curated collection of classical AI, search, and logic algorithms implemented in Python.</p>
         </div>
@@ -39,7 +42,7 @@ function App() {
             </div>
             <div className="card-footer">
               <span>{algo.files.length} File{algo.files.length !== 1 ? 's' : ''}</span>
-              <button className="view-btn">View Code</button>
+              <button className="view-btn">Preview</button>
             </div>
           </div>
         ))}
@@ -55,6 +58,11 @@ function App() {
               </button>
             </div>
             <div className="modal-body">
+              {selectedAlgo.imageUrl && (
+                <div className="preview-image-container">
+                  <img src={selectedAlgo.imageUrl} alt={`${selectedAlgo.title} Preview`} className="preview-image" />
+                </div>
+              )}
               <div className="tags mb-4">
                 {selectedAlgo.tags.map((tag) => (
                   <span key={tag} className="tag">
