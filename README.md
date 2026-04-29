@@ -57,5 +57,10 @@ Methods used to achieve desirable solutions include **BFS (Breadth-First Search)
 └── generate_data.py         # Script to extract python files to UI data
 ```
 
-## 🤝 Contributing
-Feel free to add to this folder or improve the web interface. Happy Coding!
+## License
+
+This project is licensed under the [MIT License](LICENSE). 
+<br><br> Copyright (c) 2026 <br>
+<img src="name-geo3.avif" alt="Logo" width="600"/>  <br> <br>
+[![License](https://img.shields.io/github/license/vermashaurya/ai-math-logic)](LICENSE) <br>
+Feel free to take inspiration. <br>Happy Coding!
