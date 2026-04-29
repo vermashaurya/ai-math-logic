@@ -24,7 +24,7 @@ function App() {
           <div className="ai-core-container">
             <Aperture className="ai-core-icon" size={64} />
           </div>
-          <h1 className="text-gradient">AI & Math Logic Algorithms</h1>
+          <h1 className="text-gradient">AI - Math Logic Challenges</h1>
           <p>A curated collection of classical AI, search, and logic algorithms implemented in Python.</p>
         </div>
       </header>
